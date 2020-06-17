@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContainer"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/card_item_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbCardOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#333"
+        android:clickable="false"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCardCompany"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/visa"
+        app:layout_constraintBottom_toBottomOf="@+id/rbCardOption"
+        app:layout_constraintStart_toEndOf="@+id/rbCardOption"
+        app:layout_constraintTop_toTopOf="@+id/rbCardOption"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tvCardCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCardCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toEndOf="@+id/imgCardCompany"
+        app:layout_constraintTop_toTopOf="@+id/imgCardCompany"
+        app:layout_constraintVertical_bias="0.5"
+        tools:text="Card Company" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

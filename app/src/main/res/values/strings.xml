@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CardVerifier</string>
+    <string name="choose_card">Choose Card</string>
+    <string name="back_button_description">back button description</string>
+    <string name="enter_card_number">Enter Card Number</string>
+    <string name="visa">Visa</string>
+    <string name="mastercard">MasterCard</string>
+    <string name="american_express">American Express</string>
+    <string name="discover">Discover</string>
+    <string name="company_card">Company Card</string>
+
+</resources>

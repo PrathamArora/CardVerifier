@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".activities.ChooseCardActivity">
+
+    <RelativeLayout
+        android:id="@+id/my_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="@string/choose_card"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imgBackButton"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/back_button_description"
+            android:src="@drawable/left_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_action_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clItemContainerVisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_item_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbCardOptionVisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#333"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgCardCompanyVisa"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/visa"
+                    android:contentDescription="@string/company_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbCardOptionVisa"
+                    app:layout_constraintStart_toEndOf="@+id/cbCardOptionVisa"
+                    app:layout_constraintTop_toTopOf="@+id/cbCardOptionVisa"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCardCompanyVisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:text="@string/visa"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgCardCompanyVisa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintStart_toEndOf="@+id/imgCardCompanyVisa"
+                    app:layout_constraintTop_toTopOf="@+id/imgCardCompanyVisa"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clItemContainerMasterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_item_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbCardOptionMasterCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#333"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgCardCompanyMasterCard"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/mastercard"
+                    android:contentDescription="@string/company_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbCardOptionMasterCard"
+                    app:layout_constraintStart_toEndOf="@+id/cbCardOptionMasterCard"
+                    app:layout_constraintTop_toTopOf="@+id/cbCardOptionMasterCard"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCardCompanyMasterCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:text="@string/mastercard"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgCardCompanyMasterCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintStart_toEndOf="@+id/imgCardCompanyMasterCard"
+                    app:layout_constraintTop_toTopOf="@+id/imgCardCompanyMasterCard"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clItemContainerAmericanExpress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_item_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbCardOptionAmericanExpress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#333"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgCardCompanyAmericanExpress"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/amex"
+                    android:contentDescription="@string/company_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbCardOptionAmericanExpress"
+                    app:layout_constraintStart_toEndOf="@+id/cbCardOptionAmericanExpress"
+                    app:layout_constraintTop_toTopOf="@+id/cbCardOptionAmericanExpress"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCardCompanyAmericanExpress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:text="@string/american_express"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgCardCompanyAmericanExpress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintStart_toEndOf="@+id/imgCardCompanyAmericanExpress"
+                    app:layout_constraintTop_toTopOf="@+id/imgCardCompanyAmericanExpress"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clItemContainerDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_item_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbCardOptionDiscover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#333"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgCardCompanyDiscover"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/discover"
+                    android:contentDescription="@string/company_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbCardOptionDiscover"
+                    app:layout_constraintStart_toEndOf="@+id/cbCardOptionDiscover"
+                    app:layout_constraintTop_toTopOf="@+id/cbCardOptionDiscover"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCardCompanyDiscover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:text="@string/discover"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgCardCompanyDiscover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintStart_toEndOf="@+id/imgCardCompanyDiscover"
+                    app:layout_constraintTop_toTopOf="@+id/imgCardCompanyDiscover"
+                    app:layout_constraintVertical_bias="0.5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCardNumberLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/enter_card_number"
+                android:theme="@style/TextInputLayoutAppearance"
+                app:layout_constraintTop_toBottomOf="@id/clItemContainerDiscover">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieCardNumberValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789 "
+                    android:inputType="phone"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
